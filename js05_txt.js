@@ -27,7 +27,8 @@ function createLightbox(){
    // Function to move backwards through the image list
    function showPrev(){
       lbImages.insertBefore(lbImages.lastElementChild, lbImages.firstElementChild);
-      (currentImg > 1) ? currentImg + " / " + imgCount;
+      (currentImg > 1) ? currentImg-- : currentImg = imgCount;
+      lbImages.textContent = currentImg + " / " + imgCount;
    }
 
    // Function to move forward through the image list
@@ -53,6 +54,18 @@ function createLightbox(){
    lightBox.appendChild(lbPlay);
    lbNext.id = "lbPlay";
    lbPrev.innerHTML = "&#9199";
+   let timeID;
+   lbPlay.onclick = function(){
+      if(timeID){
+         //Stop the slideshow
+         window.clearInterval(timeID);
+         timeID = undefined;
+      } else {
+         // Start the slideshow
+         showNext();
+         timeID = window.setInterval(showNext, 1500);
+      }
+   }
 
    // Design the lightbox images container
    lightBox.appendChild(lbImages);
