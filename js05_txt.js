@@ -24,6 +24,12 @@ function createLightbox(){
    let currentImg = 1;
    lbCounter.textContent = currentImg + "/" + imgCount;
 
+   // Function to move backwards through the image list
+   function showPrev(){
+      lbImages.insertBefore(lbImages.lastElementChild, lbImages.firstElementChild);
+      (currentImg > 1) ? currentImg + " / " + imgCount;
+   }
+
    // Design the lightbox previous slide button
    lightBox.appendChild(lbPrev);
    lbPrev.id = "lbPrev";
