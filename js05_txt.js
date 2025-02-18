@@ -90,7 +90,7 @@ function createLightbox(){
 
       // Add the image to the figure box
       let overlayImage = this.cloneNode("true");
-      figureBox.appendChild(overlay);
+      figureBox.appendChild(overlayImage);
 
       // Add the caption to the figure box
       let overlayCaption = document.createElement("figcaption");
