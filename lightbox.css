@@ -204,12 +204,6 @@ div#lbOverlay div#lbOverlayClose:hover {
 
 /* Background colour */
 
-*{
-   margin: 0;
-   padding: 0;
-   box-sizing: border-box;
-}
-
 .container{
    min-height: 100vh;
    overflow: hidden;
@@ -291,7 +285,4 @@ article{
    position: absolute;
    z-index: 2;
    top: 30%;
-   right: 0%;
-   height: auto;
-   width: 10%;
 }

@@ -17,6 +17,7 @@ function createLightbox(){
    // Design the lightbox title
    lightBox.appendChild(lbTitle);
    lbTitle.id = "lbTitle";
+   lbTitle.textContent = lightboxTitle;
 
    // Design the lightbox slide counter
    lightBox.appendChild(lbCounter);
@@ -41,19 +42,19 @@ function createLightbox(){
    // Design the lightbox previous slide button
    lightBox.appendChild(lbPrev);
    lbPrev.id = "lbPrev";
-   lbPrev.innerHTML = "&#9664";
+   lbPrev.innerHTML = "&#9664;";
    lbPrev.onclick = showPrev;
 
    // Design the lightbox next slide button
    lightBox.appendChild(lbNext);
    lbNext.id = "lbNext";
-   lbNext.innerHTML = "&#9654";
+   lbNext.innerHTML = "&#9654;";
    lbNext.onclick = showNext;
 
    // Design the lightbox Play-Pause button
    lightBox.appendChild(lbPlay);
    lbNext.id = "lbPlay";
-   lbPrev.innerHTML = "&#9199";
+   lbPrev.innerHTML = "&#9199;";
    let timeID;
    lbPlay.onclick = function(){
       if(timeID){
